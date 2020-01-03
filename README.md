@@ -11,19 +11,23 @@ Submit answer for last item in a README or anyother file in the URL (just to pra
 
 So, in the folder we have the following items:
 
- - *package.xml*: is the XML file that must be included with any catkin-compliant package's root folder.This file defines properties about the package such as the package name, version numbers, authors, maintainers, and dependencies on other catkin packages. It contains the mail of the mantainer and the author.
- - *params.yaml*: is where the parameter year is defined as 2019.
- - *launch/launch_file.launch*: is the launch that loads the parameter in the namespace /masteruvic, adds a rviz node to the launch file and includes the file usb_cam-test.launch from the package usb_cam.
-- *urdf/urdf.rviz*: is the file that rviz loads the first time as its initial configuration.
+ - **package.xml**: is the XML file that must be included with any catkin-compliant package's root folder.This file defines properties about the package such as the package name, version numbers, authors, maintainers, and dependencies on other catkin packages. It contains the email of the mantainer and the author.
+ - **params.yaml**: is where the parameter *year* is defined as 2019.
+ - **launch/launch_file.launch**: is the launch that loads the parameter in the *namespace /masteruvic*, adds a rviz node to the launch file and includes the file usb_cam-test.launch from the package usb_cam.
+- **urdf/urdf.rviz**: is the file that contains the rviz initial configuration.
 
-We obtain the following rviz:
+If we run the launch file:
+
+**roslaunch RI_S2_JMA launch_file.launch**
+
+We obtain the following the following:
 
 ![picture](image.png)
 
 What are the arguments of usb_cam-test.launch?
 The arguments of usb_cam.test.launch are the following ones:
 
-- /usbcam/image_view/autosize
+*- /usbcam/image_view/autosize
 - /usbcam/image_view/colormap
 - /usbcam/image_view/do_dynamic_scaling
 - /usbcam/image_view/max_image_value
@@ -43,4 +47,4 @@ The arguments of usb_cam.test.launch are the following ones:
 - /usbcam/usb_cam/image_width
 - /usbcam/usb_cam/io_method
 - /usbcam/usb_cam/pixel_format
-- /usbcam/usb_cam/video_device
+- /usbcam/usb_cam/video_device*
