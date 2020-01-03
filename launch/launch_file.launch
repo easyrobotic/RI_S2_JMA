@@ -1,0 +1,11 @@
+<launch>
+  <group ns="masteruvic">
+    <rosparam file="$(find RI_S2_JMA)/params.yaml" command="load" />
+  </group>
+  <node type="rviz" name="rviz" pkg="rviz" respawn="true" args="-d $(find RI_S2_JMA)/urdf/urdf.rviz" output="screen" />
+	<!-- node name="rviz" pkg="rviz" type="rviz" respawn="true" args="-d $(find copter_arm_robot)/config/copter.rviz" output="screen"/ -->
+  <group ns="usbcam">
+    <include file="$(find usb_cam)/launch/usb_cam-test.launch" />
+  </group>
+</launch>
+<!--arg name="year" value="$(arg year)" /-->
