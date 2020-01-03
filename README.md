@@ -20,7 +20,7 @@ If we run the launch file:
 
 **roslaunch RI_S2_JMA launch_file.launch**
 
-We obtain the following the following:
+We obtain the following:
 
 ![picture](image.png)
 
